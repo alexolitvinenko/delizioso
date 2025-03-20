@@ -3,11 +3,11 @@
 		<div class="nav-bar__body">
 			<router-link to="/"><logo/></router-link>
 			<div :class="[isShowMobMenu ? 'nav-bar__links fadeOut' : 'nav-bar__links']">
-				<router-link v-for="route in myroutes" :key="route.path" class="nav-bar__link" activeClass="nav-bar__link_active" :to="route.path">{{route.name}}</router-link>
+				<router-link v-for="route in myroutes" :key="route.path" class="nav-bar__link" activeClass="nav-bar__link_active" :to="route.path">{{route.meta.label}}</router-link>
 			</div>
 			<div class="nav-bar__btns">
 				<cart-button class="active"/>
-				<main-button class="nav-bar__login-btn green">Log in</main-button>
+				<main-button class="nav-bar__login-btn green" @click="openLogin">Log in</main-button>
 				<burger @click="showMobMenu"/>
 			</div>
 		</div>
@@ -21,7 +21,7 @@ import { useRouter } from 'vue-router'
 export default {
 	setup () {
 		const router = useRouter();
-		const myroutes = router.getRoutes();
+		const myroutes = router.getRoutes().filter((r) => r.meta?.label);
 		let isShowMobMenu = ref(false);
 
 		return {
@@ -31,6 +31,9 @@ export default {
 	methods: {
 		showMobMenu() {
 			this.isShowMobMenu = ! this.isShowMobMenu;
+		},
+		openLogin() {
+			this.router.push({ path: '/login' })
 		}
 	}
 }

@@ -1,5 +1,5 @@
 <template>
-	<navbar/>
+	<navbar v-if="this.$route.path !== '/login'"/>
 	<div class="app">
 		<router-view></router-view>
 	</div>

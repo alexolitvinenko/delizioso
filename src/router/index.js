@@ -5,37 +5,67 @@ import MenuPage from '@/pages/MenuPage.vue'
 import OrderPage from '@/pages/OrderPage.vue'
 import ReservationPage from '@/pages/ReservationPage.vue'
 import ContactPage from '@/pages/ContactPage.vue'
+import LoginPage from '@/pages/LoginPage.vue'
+import SignUpPage from '@/pages/SignUpPage.vue'
 
 const routes = [
 	{
 		path: '/',
-		name: 'Home',
-		component: HomePage
+		name: 'home',
+		component: HomePage,
+		meta: {
+			label: 'Home'
+		},
 	},
 	{
 		path: '/menu',
-		name: 'Menu',
-		component: MenuPage
+		name: 'menu',
+		component: MenuPage,
+		meta: {
+			label: 'Menu'
+		},
 	},
 	{
 		path: '/about',
-		name: 'About As',
-		component: AboutPage
+		name: 'about',
+		component: AboutPage,
+		meta: {
+			label: 'About As'
+		},
 	},
 	{
 		path: '/order',
-		name: 'Order online',
-		component: OrderPage
+		name: 'order',
+		component: OrderPage,
+		meta: {
+			label: 'Order online'
+		},
 	},
 	{
 		path: '/reservation',
-		name: 'Reservation',
-		component: ReservationPage
+		name: 'reservation',
+		component: ReservationPage,
+		meta: {
+			label: 'Reservation'
+		},
 	},
 	{
 		path: '/contact',
-		name: 'Contact us',
-		component: ContactPage
+		name: 'contact',
+		component: ContactPage,
+		meta: {
+			label: 'Contact us'
+		},
+	},
+	{
+		path: '/login',
+		name: 'login',
+		component: LoginPage
+	},
+	{
+		path: '/signup',
+		name: 'signup',
+		component: SignUpPage
 	},
 ]
 
