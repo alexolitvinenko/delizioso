@@ -31,5 +31,7 @@ export default {
 		margin-left: auto;
 		margin-right: auto;
 		font-family: $poppins;
+		height: 100%;
+		min-height: 100vh;
 	}
 </style>
