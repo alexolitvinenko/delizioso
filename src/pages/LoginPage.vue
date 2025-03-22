@@ -4,10 +4,11 @@
 		<div class="fadeLeft">
 			<h1 class="login__title">Login</h1>
 			<h2 class="login__sub-title">Don't have an account? <router-link to="/signup" class="login__link">Sign up</router-link></h2>
-			<form class="login__form">
+			<form class="login__form" method="post">
 				<form-input v-model="email" :type="'email'" :placeholder="'Email address'"/>
 				<form-input v-model="password" :type="'password'" :placeholder="'Password'"/>
 				<check-button v-model:checked="isRemember" :id="'remember'">Remember me</check-button>
+				<submit-button>Log in</submit-button>
 			</form>
 		</div>
 	</div>

@@ -5,6 +5,7 @@ import Burger from "@/components/UI/burger.vue";
 import FormInput from "@/components/UI/formInput.vue";
 import BackButton from "@/components/UI/backButton.vue";
 import CheckButton from "@/components/UI/checkButton.vue";
+import SubmitButton from "@/components/UI/submitButton.vue";
 
 export default [
 	Logo,
@@ -13,5 +14,6 @@ export default [
 	Burger,
 	FormInput,
 	BackButton,
-	CheckButton
+	CheckButton,
+	SubmitButton
 ]
