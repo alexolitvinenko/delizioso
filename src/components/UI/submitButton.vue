@@ -20,7 +20,7 @@
 		font-weight: 500;
 		font-size: 20px;
 		color: #fff;
-		background-color: $secondColor;
+		background-color: $secondColorOpacity;
 		border: none;
 		border-radius: 10px;
 		cursor: pointer;
