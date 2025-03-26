@@ -1,12 +1,8 @@
 <template>
 	<div class="login">
-		<back-button class="login__back-btn"/>
-		<div class="fadeLeft">
-			<h1 class="login__title">Login</h1>
-			<h2 class="login__sub-title">Don't have an account? <router-link to="/signup" class="login__link">Sign up</router-link></h2>
-			<LoginForm/>
-		</div>
-		<FoodBlock :type="'login'"/>
+		<h1 class="login__title">Login</h1>
+		<h2 class="login__sub-title">Don't have an account? <router-link to="/signup" class="login__link">Sign up</router-link></h2>
+		<LoginForm/>
 	</div>
 </template>
 
@@ -51,25 +47,6 @@ export default {
 		}
 		&__link {
 			color: #0094FF;
-		}
-		&__back-btn {
-			position: absolute;
-			top: 40px;
-			left: 15px;
-		}
-	}
-	.fadeLeft {
-		animation: fadeLeft 1s ease-in-out;
-	}
-
-	@keyframes fadeLeft {
-		from {
-			opacity: 0;
-			transform: translateX(-1000px);
-		}
-		to {
-			opacity: 1;
-			transform: translateX(0);
 		}
 	}
 </style>

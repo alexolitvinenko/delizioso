@@ -3,7 +3,7 @@
 		<form-input v-model="email" :type="'email'" :placeholder="'Email address'"/>
 		<form-input v-model="password" :type="'password'" :placeholder="'Password'"/>
 		<check-button v-model:checked="isRemember" :id="'remember'">Remember me</check-button>
-		<submit-button>Log in</submit-button>
+		<submit-button>Sign Up</submit-button>
 	</form>
 </template>
 

@@ -7,6 +7,7 @@ import ReservationPage from '@/pages/ReservationPage.vue'
 import ContactPage from '@/pages/ContactPage.vue'
 import LoginPage from '@/pages/LoginPage.vue'
 import SignUpPage from '@/pages/SignUpPage.vue'
+import LoginAndSignUpPage from '@/pages/LoginAndSignUpPage.vue'
 
 const routes = [
 	{
@@ -58,14 +59,21 @@ const routes = [
 		},
 	},
 	{
-		path: '/login',
-		name: 'login',
-		component: LoginPage
-	},
-	{
-		path: '/signup',
-		name: 'signup',
-		component: SignUpPage
+		path: '/auth',
+		name: 'auth',
+		component: LoginAndSignUpPage,
+		children: [
+			{
+				path: '/login',
+				name: 'login',
+				component: LoginPage,
+			},
+			{
+				path: '/signup',
+				name: 'signup',
+				component: SignUpPage,
+			}
+		]
 	},
 ]
 
