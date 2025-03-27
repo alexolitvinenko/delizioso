@@ -1,7 +1,7 @@
 <template>
 	<div class="signup">
 		<h1 class="signup__title">Sign up</h1>
-		<h2 class="signup__sub-title">Have an account? <router-link to="/login" class="signup__link">Login</router-link></h2>
+		<h2 class="signup__sub-title">Have an account? <span @click="this.$router.push({path: '/login', replace: true})" class="signup__link">Login</span></h2>
 		<SignUpForm/>
 	</div>
 </template>
