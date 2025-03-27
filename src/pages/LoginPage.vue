@@ -1,7 +1,7 @@
 <template>
 	<div class="login">
 		<h1 class="login__title">Login</h1>
-		<h2 class="login__sub-title">Don't have an account? <span @click="this.$router.push({path: '/signup', replace: true})" class="login__link">Sign up</span></h2>
+		<h2 class="login__sub-title">Don't have an account? <router-link to="/signup" :replace="true" class="login__link">Sign up</router-link></h2>
 		<LoginForm/>
 	</div>
 </template>
@@ -47,7 +47,6 @@ export default {
 		}
 		&__link {
 			color: #0094FF;
-			cursor: pointer;
 		}
 	}
 </style>
