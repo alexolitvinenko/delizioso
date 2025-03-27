@@ -22,7 +22,6 @@ export default {
 	setup () {
 		const route = useRoute();
 		const type = route.path.slice(1);
-		console.log(type);
 
 		return {
 			type
@@ -31,7 +30,6 @@ export default {
 	watch: {
 		$route (to, from) {
 			this.type = to.path.slice(1);
-			console.log(this.type);
 		}
 	}
 }

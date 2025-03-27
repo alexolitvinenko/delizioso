@@ -47,7 +47,6 @@
 			z-index: 1;
 			-webkit-filter: drop-shadow(-12px 29px 91px rgba(181, 153, 120, 0.41));
 			filter: drop-shadow(-12px 29px 91px rgba(181, 153, 120, 0.41));
-			transition: all 1s;
 		}
 		&__food-leaf-img {
 			position: absolute;
@@ -81,6 +80,14 @@
 	.fade-leave-active {
 		opacity: 1;
 		transform: translateX(0);
+	}
+
+	.fade-enter-active {
+		transition: all 1s;
+	}
+
+	.fade-leave-active {
+		transition: all 0.5s;
 	}
 
 	.fade-leave-to,
