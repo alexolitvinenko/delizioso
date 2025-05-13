@@ -44,6 +44,8 @@
 		}
 		&__food-img {
 			position: relative;
+			width: 100%;
+			height: 100%;
 			z-index: 1;
 			-webkit-filter: drop-shadow(-12px 29px 91px rgba(181, 153, 120, 0.41));
 			filter: drop-shadow(-12px 29px 91px rgba(181, 153, 120, 0.41));
@@ -76,6 +78,16 @@
 			transform: translate(-50%, -50%);
 		}
 	}
+	@keyframes fadeTopAbsoulte {
+		from {
+			opacity: 0;
+			transform:translate(-50%, 1000px);
+		}
+		to {
+			opacity: 1;
+			transform: translate(-50%, -50%);
+		}
+	}
 	.fade-enter-active,
 	.fade-leave-active {
 		opacity: 1;
@@ -94,5 +106,65 @@
 	.fade-enter-from {
 		opacity: 0;
 		transform: translateX(1000px);
+	}
+
+	@media screen and (max-width: 1285px) {
+		.food-block-images {
+			left: 650px;
+		}
+	}
+	@media screen and (max-width: $tablet) {
+		.food-block-images {
+			float: left;
+			left: 0;
+			right: 0;
+			top: 800px;
+			width: 100%;
+			display: flex;
+			align-items: center;
+			justify-content: center;
+
+			&__food-circle {
+				width: 100%;
+				height: 100%;
+				animation: fadeTopAbsoulte 0.5s ease-in-out;
+			}
+
+			&__food-img {
+				width: calc(100% - 30px * 4);
+				height: calc(100% - 30px * 4);
+			}
+		}
+
+		.fade-enter-active,
+		.fade-leave-active {
+			opacity: 1;
+			transform: translateY(0);
+		}
+
+		.fade-leave-to,
+		.fade-enter-from {
+			opacity: 0;
+			transform: translateY(1000px);
+		}
+	}
+	@media screen and (max-width: $tablet) and (max-height: 900px) {
+		.food-block-images {
+			display: none;
+		}
+	}
+</style>
+<style lang="scss">
+	@import '@/assets/scss/variable';
+	
+	@media screen and (max-width: $tablet) and (min-height: 901px) {
+		body {
+			overflow-y: hidden;
+		}
+	}
+	@media screen and (max-width: $tablet) and (max-height: 900px) {
+		body {
+			overflow-y: auto;
+		}
 	}
 </style>

@@ -2,7 +2,7 @@
 	<div class="signup">
 		<h1 class="signup__title">Sign up</h1>
 		<h2 class="signup__sub-title">Have an account? <router-link to="/login" :replace="true" class="signup__link">Login</router-link></h2>
-		<SignUpForm/>
+		<SignUpForm class="signup__form"/>
 	</div>
 </template>
 
@@ -47,7 +47,15 @@ export default {
 		}
 		&__link {
 			color: #0094FF;
-			cursor: pointer;
+		}
+	}
+	@media screen and (max-width: $tablet) {
+		.signup {
+			align-items: center;
+			min-height: auto;
+
+			&__form {
+			}
 		}
 	}
 </style>

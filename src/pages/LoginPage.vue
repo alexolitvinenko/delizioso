@@ -49,4 +49,10 @@ export default {
 			color: #0094FF;
 		}
 	}
+	@media screen and (max-width: $tablet) {
+		.login {
+			min-height: auto;
+			align-items: center;
+		}
+	}
 </style>

@@ -36,6 +36,8 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+	@import '@/assets/scss/variable';
+
 	* {
 		transition: all .5s; 
 	}
@@ -50,11 +52,26 @@ export default {
 		opacity: 0;
 		transform: translateX(-1000px);
 	}
+
 	.auth {
 		&__back-btn {
 			position: absolute;
 			top: 40px;
 			left: 15px;
+		}
+	}
+	@media screen and (max-width: $tablet) {
+		body {
+			overflow-y: hidden;
+		}
+		.auth {
+			padding-top: 20px;
+			padding-bottom: 20px;
+			
+			&__back-btn {
+				position: static;
+				margin-bottom: 40px;
+			}
 		}
 	}
 </style>

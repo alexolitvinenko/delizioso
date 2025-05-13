@@ -28,5 +28,7 @@ export default {
 		display: flex;
 		flex-direction: column;
 		row-gap: 40px;
+		width: 100%;
+		max-width: 490px;
 	}
 </style>
